@@ -5,7 +5,7 @@
 const galleryData = [
   { label: "Island of Marinduque", wide: true, tall: true, src: "images/marinduque_island.png" },
   { label: "Moriones Festival parade — Roman soldier costumes", src: "images/moriones_festival.png" },
-  { label: "Poctoy White Beach", src: "../images/poctoy.png" },
+  { label: "Poctoy White Beach", src: "images/poctoy.png" },
   { label: "Tres Reyes Islands aerial view from the sea", wide: true, src: "images/tres_reyes_islands.png" },
   { label: "Boac Cathedral fortress-church at golden hour", src: "images/boac_cathedral.png" },
   { label: "Moriones mask close-up — hand-carved and painted wood", src: "images/masks.png" },
