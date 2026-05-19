@@ -1,0 +1,507 @@
+/* ═══════════════════════════════════════
+   MARINDUQUE TOURISM — GENERAL STYLES
+   Shared across all pages
+═══════════════════════════════════════ */
+
+/* ── VARIABLES ── */
+:root {
+    --green-deep: #1a4a2e;
+    --green-mid: #2d7a4f;
+    --green-bright: #3db06a;
+    --gold: #c8963e;
+    --gold-light: #e8b86d;
+    --cream: #faf6f0;
+    --warm-white: #fffdf8;
+    --text-dark: #1a1a1a;
+    --text-mid: #4a4a4a;
+    --text-light: #888;
+    --sand: #f0e8d8;
+    --shadow: 0 4px 30px rgba(26, 74, 46, 0.12);
+    --shadow-lg: 0 12px 50px rgba(26, 74, 46, 0.18);
+    --radius: 4px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* Hard cut-off to kill unwanted right-side horizontal scrolling */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+/* ── FLEXIBLE & RESPONSIVE LAYOUT WRAPPERS ── */
+.page-main,
+.destinations-section,
+section,
+nav,
+footer {
+    width: 100%;
+    max-width: 100vw;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+p, .hero-welcome, .hero-slogan, .dest-desc {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.15;
+}
+
+/* ── NAV ── */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(26, 74, 46, 0.97);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-light);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo span {
+    color: white;
+    font-weight: 300;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* ── FOOTER ── */
+footer {
+    background: var(--green-deep);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 48px 40px 32px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-brand h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 280px;
+}
+
+.footer-col h4 {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── SECTION SHARED ── */
+section {
+    padding: 100px 40px;
+}
+
+.page-main {
+    padding-top: 64px;
+    /* Offset for fixed nav */
+}
+
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 300;
+    color: var(--green-deep);
+    margin-bottom: 20px;
+}
+
+.section-title em {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.section-lead {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 20px 0;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--green-deep);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--green-mid);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1.5px solid var(--green-mid);
+    color: var(--green-mid);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--green-deep);
+    border-color: var(--green-deep);
+    color: white;
+}
+
+/* ── IMAGE PLACEHOLDER (shared) ── */
+.img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px,
+            rgba(255, 255, 255, 0.04) 10px, rgba(255, 255, 255, 0.04) 11px);
+}
+
+.img-placeholder svg {
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+/* ── FADE IN ── */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero {
+    position: relative;
+    width: 100%;
+    min-height: 65vh;
+    /* Drop slightly from 75vh to prevent vertical bloating on medium devices */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+    overflow: hidden;
+    background: var(--green-deep);
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background-image: url("../images/municipal.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px) brightness(0.65);
+    z-index: 1;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(61, 176, 106, 0.15) 0%, transparent 70%);
+    z-index: 2;
+}
+
+.page-hero-dots {
+    position: absolute;
+    top: 20%;
+    right: 6%;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(circle, rgba(200, 150, 62, 0.35) 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 100%;
+}
+
+.page-hero-eyebrow {
+    display: inline-block;
+    color: var(--gold-light);
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    border: 1px solid rgba(200, 150, 62, 0.5);
+    border-radius: 40px;
+    padding: 8px 24px;
+    margin-bottom: 24px;
+    background: rgba(26, 74, 46, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+    /* Refined fluid sizing bounds to keep strings safe */
+    font-weight: 400;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero h1 em {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.page-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    max-width: 640px;
+    margin-inline: auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 900px) {
+    nav {
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--green-deep);
+        padding: 16px;
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .page-hero {
+        min-height: 50vh;
+        padding: 100px 20px 60px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-hero {
+        padding: 90px 16px 50px;
+    }
+
+    .page-hero-dots {
+        display: none;
+        /* Strip out visual assets causing sizing issues on small displays */
+    }
+
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 40px 20px 24px;
+    }
+}

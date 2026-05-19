@@ -1,0 +1,225 @@
+/* ═══════════════════════════════════════
+   GALLERY PAGE — gallery.css
+═══════════════════════════════════════ */
+
+.gallery-section {
+    background: var(--cream);
+    padding: 80px 40px 100px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 160px;
+    gap: 6px;
+    margin-top: 48px;
+}
+
+.gallery-item {
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.gallery-item:hover {
+    opacity: 0.88;
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.gallery-item.tall {
+    grid-row: span 2;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle zoom effect matching your current hover timing */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Placeholder colors cycle */
+.gallery-item {
+    background: linear-gradient(135deg, #a8c4b0, #7aaa90);
+}
+
+.gallery-item:nth-child(3n) {
+    background: linear-gradient(135deg, #b8c4a8, #90aa7a);
+}
+
+.gallery-item:nth-child(3n+1) {
+    background: linear-gradient(135deg, #c4b8a8, #aa9a7a);
+}
+
+.gallery-item:nth-child(5n) {
+    background: linear-gradient(135deg, #a8b8c4, #7a90aa);
+}
+
+.gallery-item:nth-child(7n) {
+    background: linear-gradient(135deg, #c4a8b8, #aa7a90);
+}
+
+.gallery-item:nth-child(11n) {
+    background: linear-gradient(135deg, #b8a8c4, #8a7aaa);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+}
+
+.gallery-placeholder svg {
+    width: 26px;
+    height: 26px;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lb-content {
+    max-width: 880px;
+    width: 90%;
+    text-align: center;
+}
+
+.lb-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: var(--radius);
+}
+
+.lb-img svg {
+    width: 56px;
+    height: 56px;
+}
+
+.lb-caption {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.88rem;
+    margin-top: 16px;
+    font-style: italic;
+}
+
+.lb-close {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.4rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.lb-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.lb-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 2rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.lb-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lb-prev {
+    left: 20px;
+}
+
+.lb-next {
+    right: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-section {
+        padding: 60px 24px 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item.wide {
+        grid-column: span 1;
+    }
+
+    .lb-prev {
+        left: 8px;
+    }
+
+    .lb-next {
+        right: 8px;
+    }
+}

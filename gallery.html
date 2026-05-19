@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — Marinduque</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <div class="page-main">
+      <div class="page-hero">
+        <div class="page-hero-dots"></div>
+        <div class="page-hero-content">
+          <span class="page-hero-eyebrow">Visual Journey</span>
+          <h1>Photo <em>Gallery</em></h1>
+          <p>
+            Landscapes, festivals, food, and people — a visual love letter to
+            the Heart of the Philippines.
+          </p>
+        </div>
+      </div>
+
+      <section class="gallery-section">
+        <div class="container">
+          <span class="section-label">30 Photos</span>
+          <h2 class="section-title">
+            Explore <em>Marinduque</em> Through Images
+          </h2>
+          <div class="divider"></div>
+          <p class="section-lead">
+            Click any photo to open a full-screen preview. Use arrow keys or the
+            navigation buttons to browse.
+          </p>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+      <button id="lbClose" class="lb-close" aria-label="Close lightbox">
+        &times;
+      </button>
+      <button id="lbPrev" class="lb-nav lb-prev" aria-label="Previous image">
+        &#10094;
+      </button>
+
+      <div class="lb-content">
+        <!-- THIS IS THE CRUCIAL ELEMENT YOUR JAVASCRIPT IS LOOKING FOR -->
+        <img id="lbImage" src="" alt="" class="lb-img" />
+        <div id="lbCaption" class="lb-caption"></div>
+      </div>
+
+      <button id="lbNext" class="lb-nav lb-next" aria-label="Next image">
+        &#10095;
+      </button>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>

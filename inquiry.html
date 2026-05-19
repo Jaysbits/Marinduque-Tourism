@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiry — Marinduque</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/inquiry.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <div class="page-main">
+      <div class="page-hero">
+        <div class="page-hero-dots"></div>
+        <div class="page-hero-content">
+          <span class="page-hero-eyebrow">Plan Your Visit</span>
+          <h1>Send an <em>Inquiry</em></h1>
+          <p>
+            Have questions about visiting Marinduque? We'll help you plan the
+            perfect island getaway.
+          </p>
+        </div>
+      </div>
+
+      <section class="inquiry-section">
+        <div class="container inquiry-layout">
+          <!-- SIDEBAR -->
+          <div class="inquiry-sidebar fade-in">
+            <h3>Why Reach Out?</h3>
+            <p>
+              Our local tourism team can help you with destination
+              recommendations, festival schedules, accommodation referrals,
+              guided tour arrangements, and any questions about getting to and
+              around Marinduque.
+            </p>
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <div>
+                  <strong>Response Time</strong>
+                  <span>Within 24 hours on business days</span>
+                </div>
+              </div>
+              <div class="sidebar-info-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <div>
+                  <strong>Location</strong>
+                  <span>Boac, Marinduque, MIMAROPA, Philippines</span>
+                </div>
+              </div>
+              <div class="sidebar-info-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.19 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.16a16 16 0 006.93 6.93l1.43-1.43a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                  />
+                </svg>
+                <div>
+                  <strong>Phone</strong>
+                  <span>(042) 332-XXXX (Tourism Office)</span>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-note">
+              <strong>🌿 Tip:</strong> Mention your interests in the message —
+              beaches, festivals, food tours, heritage, or adventure — and we'll
+              tailor our recommendations just for you.
+            </div>
+          </div>
+
+          <!-- FORM -->
+          <div class="inquiry-form-wrap fade-in">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName"
+                  >Full Name <span class="req">*</span></label
+                >
+                <input type="text" id="fullName" placeholder="Juan dela Cruz" />
+                <span class="field-error" id="err-fullName"
+                  >Full name is required.</span
+                >
+              </div>
+              <div class="form-group">
+                <label for="email"
+                  >Email Address <span class="req">*</span></label
+                >
+                <input type="email" id="email" placeholder="juan@email.com" />
+                <span class="field-error" id="err-email"
+                  >Please enter a valid email address.</span
+                >
+              </div>
+              <div class="form-group">
+                <label for="phone"
+                  >Contact Number <span class="req">*</span></label
+                >
+                <input type="tel" id="phone" placeholder="09XXXXXXXXX" />
+                <span class="field-error" id="err-phone"
+                  >Contact number must contain numbers only.</span
+                >
+              </div>
+              <div class="form-group">
+                <label for="destination"
+                  >Selected Destination <span class="req">*</span></label
+                >
+                <select id="destination">
+                  <option value="">— Choose a destination —</option>
+                  <optgroup label="Beaches & Islands">
+                    <option>Maniwaya Beach</option>
+                    <option>Poctoy White Beach</option>
+                    <option>Santa Cruz White Beach</option>
+                    <option>Tres Reyes Islands</option>
+                  </optgroup>
+                  <optgroup label="Nature & Adventure">
+                    <option>Mount Malindig</option>
+                    <option>Bathala Caves</option>
+                    <option>Bagumbungan Cave</option>
+                    <option>Malbog Sulfur Spring</option>
+                  </optgroup>
+                  <optgroup label="Heritage & Culture">
+                    <option>Boac Cathedral</option>
+                    <option>Luzon Datum Point</option>
+                    <option>Marinduque National Museum</option>
+                  </optgroup>
+                  <optgroup label="Food & Experiences">
+                    <option>Uraro Cookie Makers</option>
+                    <option>Coconut Trail Experience</option>
+                  </optgroup>
+                  <option>Multiple Destinations</option>
+                </select>
+                <span class="field-error" id="err-destination"
+                  >Please select a destination.</span
+                >
+              </div>
+              <div class="form-group">
+                <label for="travelDate"
+                  >Travel Date <span class="req">*</span></label
+                >
+                <input type="date" id="travelDate" />
+                <span class="field-error" id="err-travelDate"
+                  >Please select a travel date.</span
+                >
+              </div>
+              <div class="form-group">
+                <label for="visitors"
+                  >Number of Visitors <span class="req">*</span></label
+                >
+                <input type="number" id="visitors" min="1" placeholder="1" />
+                <span class="field-error" id="err-visitors"
+                  >Must be at least 1 visitor.</span
+                >
+              </div>
+              <div class="form-group full">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us about your travel plans, interests, questions, or special requirements — the more detail, the better we can help…"
+                ></textarea>
+                <span class="field-error" id="err-message"
+                  >Message is required.</span
+                >
+              </div>
+              <div class="form-group full">
+                <button
+                  class="btn-submit"
+                  id="submitBtn"
+                  onclick="submitForm()"
+                >
+                  Send Inquiry
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <div>
+                <strong>Inquiry Sent!</strong>
+                <p>
+                  Thank you for reaching out. We'll get back to you within 24
+                  hours. <em>Salamat po at mabuhay!</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/main.js"></script>
+    <script src="js/inquiry.js"></script>
+  </body>
+</html>

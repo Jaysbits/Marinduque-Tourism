@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations — Marinduque</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/destinations.css" />
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <div class="page-main">
+      <div class="page-hero">
+        <div class="page-hero-dots"></div>
+        <div class="page-hero-content">
+          <span class="page-hero-eyebrow">Explore the Island</span>
+          <h1>Tourist <em>Destinations</em></h1>
+          <p>
+            Beaches, caves, mountains, heritage sites, and culinary stops across
+            all six municipalities.
+          </p>
+        </div>
+      </div>
+
+      <section class="destinations-section">
+        <div class="container">
+          <!-- CONTROLS -->
+          <div class="dest-controls">
+            <div class="search-wrap">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+              <input
+                type="text"
+                id="destSearch"
+                placeholder="Search by name, municipality, or category…"
+              />
+            </div>
+            <div class="filter-pills" id="filterPills">
+              <button class="pill active" data-filter="All">All</button>
+              <button class="pill" data-filter="Beach">Beach</button>
+              <button class="pill" data-filter="Island">Island</button>
+              <button class="pill" data-filter="Mountain">Mountain</button>
+              <button class="pill" data-filter="Cave">Cave</button>
+              <button class="pill" data-filter="Historical Site">
+                Historical Site
+              </button>
+              <button class="pill" data-filter="Adventure">Adventure</button>
+              <button class="pill" data-filter="Food Destination">Food</button>
+            </div>
+          </div>
+          <p class="dest-count" id="destCount"></p>
+          <div class="dest-grid" id="destGrid"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-wrap">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal" id="modal">
+          <div class="modal-img-container">
+            <img src="" alt="" id="modalImg" />
+          </div>
+          <div class="modal-body">
+            <h2 id="modalName"></h2>
+            <div class="modal-badges">
+              <span class="modal-badge cat" id="modalCat"></span>
+              <span class="modal-badge loc" id="modalLoc"></span>
+            </div>
+            <p class="modal-desc" id="modalDesc"></p>
+            <div class="modal-info-grid">
+              <div class="modal-info-item">
+                <h4>Entrance Fee</h4>
+                <p id="modalFee"></p>
+              </div>
+              <div class="modal-info-item">
+                <h4>Opening Hours</h4>
+                <p id="modalHours"></p>
+              </div>
+              <div class="modal-info-item">
+                <h4>Best Time to Visit</h4>
+                <p id="modalBest"></p>
+              </div>
+              <div class="modal-info-item">
+                <h4>How to Get There</h4>
+                <p id="modalHow"></p>
+              </div>
+            </div>
+            <div class="modal-section">
+              <h3>Activities</h3>
+              <ul id="modalActivities"></ul>
+            </div>
+            <div class="modal-section" style="margin-top: 20px">
+              <h3>Travel Tips</h3>
+              <ul id="modalTips"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/main.js"></script>
+    <script src="js/destinations.js"></script>
+  </body>
+</html>

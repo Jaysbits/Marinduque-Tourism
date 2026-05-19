@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════
+   FESTIVALS PAGE — festivals.css
+═══════════════════════════════════════ */
+
+.festivals-section {
+    background: var(--cream);
+    padding: 80px 40px 100px;
+}
+
+.festival-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+/* ── FESTIVAL FEATURE ── */
+.festival-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.festival-feature.reverse {
+    direction: rtl;
+}
+
+.festival-feature.reverse>* {
+    direction: ltr;
+}
+
+.festival-img {
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+}
+
+.festival-content {}
+
+.fest-month {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200, 150, 62, 0.4);
+    padding: 5px 14px;
+    border-radius: 40px;
+    margin-bottom: 16px;
+    background: rgba(200, 150, 62, 0.08);
+}
+
+.festival-content h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: var(--green-deep);
+    margin-bottom: 8px;
+}
+
+.fest-location {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-bottom: 18px;
+}
+
+.festival-content p {
+    font-size: 0.93rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+
+.festival-content em {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.fest-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.fest-highlight-item {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 14px;
+    border-top: 2px solid var(--green-bright);
+}
+
+.fest-highlight-item strong {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 5px;
+}
+
+.fest-highlight-item span {
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* ── MASKS SECTION ── */
+/* ── MASKS SECTION ── */
+.masks-section {
+    background: var(--warm-white);
+    padding: 100px 40px;
+}
+
+.masks-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.masks-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.masks-text p {
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.mask-img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .festival-feature, .festival-feature.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 32px;
+    }
+
+    .masks-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .fest-highlights {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .festivals-section {
+        padding: 60px 24px 80px;
+    }
+
+    .masks-section {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .fest-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .masks-imgs {
+        grid-template-columns: 1fr;
+    }
+}
